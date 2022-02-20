@@ -14,6 +14,7 @@ class HomeController extends Controller
             ->join('scores', 'users.id', 'scores.user_id')
             ->selectRaw('users.name, avg(scores.score) as average_score')
             ->groupBy('users.name')
+            ->havingRaw('count(scores.user_id) >= 10')
             ->orderBy('average_score', 'DESC')
             ->limit(10)
             ->get();
