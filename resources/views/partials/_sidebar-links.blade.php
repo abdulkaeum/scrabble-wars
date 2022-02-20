@@ -12,8 +12,8 @@
         </a>
     </li>
     <li>
-        <a class="text-lg mb-4 block hover:text-blue-400 {{ Request::routeIs('home') ? 'text-blue-400' : '' }}"
-           href="/">
+        <a class="text-lg mb-4 block hover:text-blue-400 {{ Request::routeIs('game.create') ? 'text-blue-400' : '' }}"
+           href="{{ route('game.create') }}">
             <i class="fas fa-gamepad mr-2"></i> Add Game
         </a>
     </li>

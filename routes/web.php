@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\GameController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -25,3 +26,7 @@ Route::get('users/{user}', [UserController::class, 'show'])->name('user.show');
 Route::get('users/{user}/edit', [UserController::class, 'edit'])->name('user.edit');
 Route::patch('users/{user}', [UserController::class, 'update'])->name('user.update');
 Route::post('users', [UserController::class, 'store'])->name('user.store');
+
+
+Route::get('game/creat', [GameController::class, 'create'])->name('game.create');
+Route::post('game', [GameController::class, 'store'])->name('game.store');
