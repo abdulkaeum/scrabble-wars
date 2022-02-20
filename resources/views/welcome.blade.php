@@ -1,3 +1,3 @@
 <x-layout>
-    Hello world
+    Leaderboard
 </x-layout>
