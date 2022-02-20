@@ -41,4 +41,17 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    /**
+     * The relationship/link between this model (User) and the model Game
+     * A user can have many games and a game can have many users
+     * return scores info from the pivot table 'scores'
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     */
+    public function games()
+    {
+        return $this->belongsToMany(Game::class, 'scores')
+            ->withTimestamps()
+            ->withPivot(['score', 'winner']);
+    }
 }
