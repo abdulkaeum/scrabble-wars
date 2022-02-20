@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Score extends Model
 {
     use HasFactory;
+
+    protected $fillable = ['user_id', 'game_id', 'score', 'winner'];
 }

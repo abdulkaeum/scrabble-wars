@@ -27,6 +27,6 @@ Route::get('users/{user}/edit', [UserController::class, 'edit'])->name('user.edi
 Route::patch('users/{user}', [UserController::class, 'update'])->name('user.update');
 Route::post('users', [UserController::class, 'store'])->name('user.store');
 
-
-Route::get('game/creat', [GameController::class, 'create'])->name('game.create');
-Route::post('game', [GameController::class, 'store'])->name('game.store');
+Route::get('games', [GameController::class, 'index'])->name('game.index');
+Route::get('games/create', [GameController::class, 'create'])->name('game.create');
+Route::post('games', [GameController::class, 'store'])->name('game.store');

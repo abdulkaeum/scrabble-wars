@@ -18,6 +18,12 @@
         </a>
     </li>
     <li>
+        <a class="text-lg mb-4 block hover:text-blue-400 {{ Request::routeIs('game.index') ? 'text-blue-400' : '' }}"
+           href="{{ route('game.index') }}">
+            <i class="fas fa-gamepad mr-2"></i> All Games
+        </a>
+    </li>
+    <li>
         <a class="text-lg mb-4 block hover:text-blue-400 {{ Request::routeIs('home') ? 'text-blue-400' : '' }}"
            href="/">
             <i class="fas fa-chart-bar mr-2"></i> Leaderboard
