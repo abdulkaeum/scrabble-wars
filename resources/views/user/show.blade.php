@@ -11,14 +11,14 @@
         </div>
         <div class="p-3 flex-1">
             <p class="font-bold">Statistics</p>
-            <p>Total games won #</p>
-            <p>Total games lost #</p>
-            <p>Average score #</p>
-            <p>Highest score #</p>
+            <p>Total games won #{{ $userStats['won'] }}</p>
+            <p>Total games lost #{{ $userStats['lost'] }}</p>
+            <p>Average score #{{ $userStats['avgScore'] }}</p>
+            <p>Highest score #{{ $userStats['highestScore'] }}</p>
             <ul class="ml-5">
-                <li>Date: #</li>
-                <li>Game: #</li>
-                <li>Opponent: </li>
+                <li>Date: {{ $userStats['highestScoreDate'] }}</li>
+                <li>Game: #{{ $userStats['highestScoreGame'] }}</li>
+                <li>Against: {{ $userStats['highestScoreAgainst'] }}</li>
             </ul>
         </div>
     </div>

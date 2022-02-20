@@ -17,7 +17,9 @@ class UserController extends Controller
 
     public function show(User $user)
     {
-        return view('user.show', compact('user'));
+        $userStats = $user->getUserStats();
+
+        return view('user.show', compact('user', 'userStats'));
     }
 
     public function create()
