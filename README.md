@@ -1,4 +1,4 @@
-## Scrabble Wars Coding Challenge
+## Scrabble Wars
 
 ### Description
 A Scrabble Club requires a system to store members’ information and provide leader boards to show their top performing players.
